@@ -1,4 +1,4 @@
-Upload these files directly to the root of the GitHub repository.
-Do not upload the zip file itself.
-After upload, set GitHub Pages to Deploy from a branch -> main -> /(root).
-Your share link will be: https://friend05.github.io/faheemfs.github.io/
+Upload these files directly to the root of the GitHub repository to update the live portfolio contact number.
+Replace the existing root files with these versions.
+After upload, GitHub Pages will continue using Deploy from a branch -> main -> /(root).
+Live link: https://friend05.github.io/faheemfs.github.io/
