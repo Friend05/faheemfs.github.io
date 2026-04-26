@@ -1,4 +1,0 @@
-Upload these files directly to the root of the GitHub repository to update the live portfolio contact number.
-Replace the existing root files with these versions.
-After upload, GitHub Pages will continue using Deploy from a branch -> main -> /(root).
-Live link: https://friend05.github.io/faheemfs.github.io/
