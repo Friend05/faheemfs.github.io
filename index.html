@@ -1,0 +1,59 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <script>
+        (function () {
+          var params = new URLSearchParams(window.location.search);
+          var redirectPath = params.get('p');
+
+          if (!redirectPath) {
+            return;
+          }
+
+          var restoredQuery = params.get('q');
+          var nextUrl = '/faheemfs.github.io/' + redirectPath.replace(/^\/+/, '');
+
+          if (restoredQuery) {
+            nextUrl += '?' + restoredQuery;
+          }
+
+          if (window.location.hash) {
+            nextUrl += window.location.hash;
+          }
+
+          window.history.replaceState(null, '', nextUrl);
+        })();
+      </script>
+      <title>Mohammed Faheem FS | Business Analyst Portfolio</title>
+      <meta
+        name="description"
+        content="Portfolio for Mohammed Faheem FS focused on business analysis, product operations, reporting, and stakeholder-ready problem solving."
+      />
+      <meta name="theme-color" content="#122033" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Mohammed Faheem FS | Business Analyst Portfolio" />
+      <meta
+        property="og:description"
+        content="Business Analyst portfolio featuring requirements, product operations, reporting, and structured stakeholder communication."
+      />
+      <meta property="og:image" content="/faheemfs.github.io/og-cover.svg" />
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:title" content="Mohammed Faheem FS | Business Analyst Portfolio" />
+      <meta
+        property="twitter:description"
+        content="Business Analyst portfolio featuring requirements, product operations, reporting, and structured stakeholder communication."
+      />
+      <meta property="twitter:image" content="/faheemfs.github.io/og-cover.svg" />
+      <link rel="icon" type="image/svg+xml" href="/faheemfs.github.io/favicon.svg" />
+      <script type="module" crossorigin src="/faheemfs.github.io/assets/index-BB2me_0f.js"></script>
+      <link rel="stylesheet" crossorigin href="/faheemfs.github.io/assets/index-Df_SrqoU.css">
+    </head>
+
+    <body>
+      <div id="root"></div>
+    </body>
+  </html>
+  
