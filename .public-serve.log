@@ -1,0 +1,31 @@
+ INFO  Accepting connections at http://localhost:4174
+ HTTP  7/4/2026 9:27:31 pm 127.0.0.1 GET /
+ HTTP  7/4/2026 9:27:31 pm 127.0.0.1 Returned 200 in 12 ms
+ HTTP  7/4/2026 9:33:26 pm 127.0.0.1 GET /
+ HTTP  7/4/2026 9:33:26 pm 127.0.0.1 Returned 200 in 3 ms
+ HTTP  7/4/2026 9:33:38 pm 127.0.0.1 GET /Mohammed-Faheem-Business-Analyst-Resume.pdf
+ HTTP  7/4/2026 9:33:38 pm 127.0.0.1 Returned 200 in 3 ms
+ HTTP  7/4/2026 9:33:38 pm 127.0.0.1 GET /case-study/course-management-dashboard
+ HTTP  7/4/2026 9:33:38 pm 127.0.0.1 Returned 200 in 2 ms
+ HTTP  7/4/2026 9:34:32 pm 127.0.0.1 GET /
+ HTTP  7/4/2026 9:34:32 pm 127.0.0.1 Returned 200 in 2 ms
+ HTTP  7/4/2026 9:34:32 pm 127.0.0.1 GET /assets/index-Df_SrqoU.css
+ HTTP  7/4/2026 9:34:32 pm 127.0.0.1 GET /assets/index-NqA3p0Jb.js
+ HTTP  7/4/2026 9:34:32 pm 127.0.0.1 Returned 200 in 5 ms
+ HTTP  7/4/2026 9:34:32 pm 127.0.0.1 Returned 200 in 4 ms
+ HTTP  7/4/2026 9:34:33 pm 127.0.0.1 GET /favicon.svg
+ HTTP  7/4/2026 9:34:33 pm 127.0.0.1 Returned 200 in 2 ms
+ HTTP  7/4/2026 9:34:35 pm 127.0.0.1 GET /Mohammed-Faheem-Business-Analyst-Resume.pdf
+ HTTP  7/4/2026 9:34:35 pm 127.0.0.1 Returned 200 in 1 ms
+ HTTP  7/4/2026 9:37:57 pm 127.0.0.1 GET /case-study/course-management-dashboard
+ HTTP  7/4/2026 9:37:57 pm 127.0.0.1 Returned 200 in 2 ms
+ HTTP  7/4/2026 9:37:58 pm 127.0.0.1 GET /assets/index-NqA3p0Jb.js
+ HTTP  7/4/2026 9:37:58 pm 127.0.0.1 Returned 304 in 1 ms
+ HTTP  7/4/2026 9:37:58 pm 127.0.0.1 GET /assets/index-Df_SrqoU.css
+ HTTP  7/4/2026 9:37:58 pm 127.0.0.1 Returned 304 in 2 ms
+ HTTP  7/4/2026 10:14:36 pm 127.0.0.1 GET /
+ HTTP  7/4/2026 10:14:36 pm 127.0.0.1 Returned 200 in 6 ms
+ HTTP  7/4/2026 10:14:36 pm 127.0.0.1 GET /assets/index-DCMlADVS.js
+ HTTP  7/4/2026 10:14:36 pm 127.0.0.1 GET /assets/index-Df_SrqoU.css
+ HTTP  7/4/2026 10:14:36 pm 127.0.0.1 Returned 304 in 5 ms
+ HTTP  7/4/2026 10:14:36 pm 127.0.0.1 Returned 200 in 10 ms

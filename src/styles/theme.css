@@ -1,0 +1,567 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --background: #f8fafc;
+  --foreground: #111827;
+  --card: #ffffff;
+  --card-foreground: #111827;
+  --popover: #ffffff;
+  --popover-foreground: #111827;
+  --primary: #111827;
+  --primary-foreground: #ffffff;
+  --secondary: #f3f4f6;
+  --secondary-foreground: #111827;
+  --muted: #f3f4f6;
+  --muted-foreground: #6b7280;
+  --accent: #00a86b;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: rgba(0, 0, 0, 0.08);
+  --input: transparent;
+  --input-background: #ffffff;
+  --switch-background: #e5e7eb;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #00a86b;
+  --radius: 0.75rem;
+
+  /* Sachin Kumar exact match tokens */
+  --pf-bg-dark: #050b09;
+  --pf-bg-light: #ffffff;
+  --pf-bg-light-alt: #f8fafc;
+  
+  --pf-text-dark: #ffffff;
+  --pf-text-dark-muted: rgba(255, 255, 255, 0.75);
+  
+  --pf-text-light: #111827;
+  --pf-text-light-muted: #4b5563;
+  --pf-text-light-subtle: #6b7280;
+  
+  --pf-accent: #00a86b;
+  --pf-accent-light: #00d68f;
+  --pf-accent-dim: rgba(0, 168, 107, 0.1);
+  --pf-accent-glow: rgba(0, 168, 107, 0.3);
+  
+  --pf-border-light: rgba(0, 0, 0, 0.08);
+  --pf-border-dark: rgba(255, 255, 255, 0.1);
+
+  --pf-font-display: 'Bricolage Grotesque', sans-serif;
+  --pf-font-body: 'Inter', sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+/* ─── Base ──────────────────────────────────────── */
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    font-size: var(--font-size);
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    font-family: var(--pf-font-body);
+    background: var(--pf-bg-light);
+    color: var(--pf-text-light);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: var(--pf-accent-glow);
+    color: inherit;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--pf-font-display);
+  }
+
+  h1 {
+    font-size: clamp(2.1rem, 5.5vw, 4.5rem);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+
+  h2 {
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+}
+
+/* ─── Layout ────────────────────────────────────── */
+
+.pf-section {
+  padding: 6rem 0;
+}
+
+.pf-section-dark {
+  background-color: var(--pf-bg-dark);
+  color: var(--pf-text-dark);
+}
+
+.pf-section-light {
+  background-color: var(--pf-bg-light);
+  color: var(--pf-text-light);
+}
+
+.pf-section-light-alt {
+  background-color: var(--pf-bg-light-alt);
+  color: var(--pf-text-light);
+  border-bottom: 1px solid var(--pf-border-light);
+}
+
+.pf-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ─── Hero Grid Effect ─────────────────────────── */
+
+.pf-hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: 0;
+  mask-image: radial-gradient(circle at center, black, transparent 80%);
+  -webkit-mask-image: radial-gradient(circle at center, black, transparent 80%);
+}
+
+.pf-hero-glow {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60vw;
+  height: 60vw;
+  background: radial-gradient(circle, rgba(0, 168, 107, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ─── Section Labels & Typography ──────────────── */
+
+.pf-section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.pf-section-label-text {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--pf-text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.pf-section-label-icon {
+  color: var(--pf-text-light);
+  width: 16px;
+  height: 16px;
+  stroke-width: 3;
+}
+
+.pf-section-label.accent .pf-section-label-text,
+.pf-section-label.accent .pf-section-label-icon {
+  color: var(--pf-accent);
+}
+
+.pf-text-gradient {
+  color: var(--pf-accent);
+  background-image: linear-gradient(135deg, var(--pf-accent-light) 0%, var(--pf-accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: block;
+  padding-bottom: 0.15em;
+  font-weight: 900;
+}
+
+/* ─── Buttons ──────────────────────────────────── */
+
+.pf-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.pf-btn-primary {
+  padding: 0.8rem 1.5rem 0.8rem 1.75rem;
+  background-color: var(--pf-accent);
+  color: #050b09;
+  box-shadow: 0 10px 25px rgba(0, 168, 107, 0.3);
+}
+
+.pf-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(0, 168, 107, 0.4);
+}
+
+.pf-btn-primary .pf-btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease;
+  color: #050b09;
+}
+
+.pf-btn-primary:hover .pf-btn-icon {
+  transform: translateX(4px);
+}
+
+.pf-btn-secondary {
+  padding: 0.8rem 1.75rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.pf-btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ─── Cards ────────────────────────────────────── */
+
+.pf-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  border: 1px solid #f3f4f6;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pf-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.pf-card-accent {
+  background-color: var(--pf-accent);
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 20px 25px -5px rgba(0, 168, 107, 0.2);
+}
+
+.pf-card-accent h3 {
+  color: #ffffff;
+}
+
+.pf-card-accent p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ─── Navigation ───────────────────────────────── */
+
+.pf-nav {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.pf-nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+  padding: 0 1rem 0 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.pf-nav.scrolled .pf-nav-inner {
+  background: rgba(10, 10, 15, 0.85);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.pf-nav-logo {
+  font-family: var(--pf-font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pf-nav-logo span.accent {
+  color: var(--pf-accent);
+  font-weight: 400;
+}
+
+.pf-nav-links {
+  display: none;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+@media (min-width: 768px) {
+  .pf-nav-links {
+    display: flex;
+  }
+}
+
+.pf-nav-links a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.pf-nav-links a:hover {
+  color: #ffffff;
+}
+
+.pf-nav-btn {
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 0.6rem 1.5rem;
+  background: var(--pf-accent);
+  color: #111827;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: all 0.2s;
+  box-shadow: 0 0 20px rgba(0, 168, 107, 0.3);
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .pf-nav-btn {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.pf-nav-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(0, 168, 107, 0.5);
+}
+
+.pf-nav-toggle {
+  display: flex;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: #ffffff;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .pf-nav-toggle {
+    display: none;
+  }
+}
+
+/* Mobile Menu */
+.pf-mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: #050b09;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.pf-mobile-menu.is-open {
+  transform: translateX(0);
+}
+
+.pf-mobile-menu a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pf-mobile-close {
+  align-self: flex-end;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+/* ─── Hero Proof Bar ───────────────────────────── */
+
+.pf-proof-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 800px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 2rem 1rem;
+  background: linear-gradient(90deg, transparent, rgba(0, 168, 107, 0.03), transparent);
+}
+
+.pf-proof-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  flex: 1 1 min-content;
+  min-width: 120px;
+}
+
+.pf-proof-value {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--pf-accent);
+  letter-spacing: -0.02em;
+}
+
+.pf-proof-label {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+/* ─── Badges & Tags ────────────────────────────── */
+
+.pf-badge {
+  background-color: rgba(0, 168, 107, 0.08);
+  color: var(--pf-accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 0.4rem 0.8rem;
+  border-radius: 9999px;
+  display: inline-block;
+}
+
+/* ─── Misc ─────────────────────────────────────── */
+
+.pf-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/5;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+  background: #f3f4f6;
+}
+
+.pf-image-wrapper img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

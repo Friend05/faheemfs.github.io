@@ -1,0 +1,9 @@
+Upload these files to the GitHub repo root for Friend05/faheemfs.github.io:
+- index.html
+- 404.html
+- favicon.svg
+- og-cover.svg
+- Mohammed-Faheem-Business-Analyst-Resume-Updated.pdf
+
+This bundle is built specifically for the GitHub Pages base path /faheemfs.github.io/.
+After uploading, wait 1-2 minutes and hard refresh the live site.
