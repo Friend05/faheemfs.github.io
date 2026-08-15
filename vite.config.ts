@@ -3,18 +3,8 @@ import path from 'path'
 import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
 
-const [repositoryOwner = '', repositoryName = ''] = (process.env.GITHUB_REPOSITORY ?? '/').split('/')
-const userOrOrgPagesPrefix = repositoryName.replace(/\.github\.io$/i, '')
-const isUserOrOrgPagesRepo =
-  repositoryName.endsWith('.github.io') &&
-  repositoryOwner.toLowerCase() === userOrOrgPagesPrefix.toLowerCase()
-const base =
-  process.env.GITHUB_ACTIONS === 'true' && repositoryName && !isUserOrOrgPagesRepo
-    ? `/${repositoryName}/`
-    : '/'
-
 export default defineConfig({
-  base,
+  base: '/faheemfs.github.io/',
   build: {
     // Keep build artifacts in the output root so manual GitHub uploads
     // work without creating an assets/ folder in the repository.
