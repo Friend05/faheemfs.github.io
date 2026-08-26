@@ -1,12 +1,8 @@
-Upload these files to the root of the `Friend05/faheemfs.github.io` repository:
-- `404.html`
-- `favicon.svg`
-- `index.html`
-- `index-DFlHorze.js`
-- `index-Df_SrqoU.css`
-- `Mohammed-Faheem-Generalist-Resume.pdf`
-- `og-cover.svg`
+Upload these files to the root of the Friend05/faheemfs.github.io repository:
+- favicon.svg
+- og-cover.svg
+- Mohammed-Faheem-Generalist-Resume.pdf
+- index.html
 
-This build is configured for the GitHub Pages base path `/faheemfs.github.io/`.
-If older files such as `index-BB2me_0f.js` are still in the repo, they can be deleted after upload.
-After replacing the repository files, wait 1-2 minutes and then hard-refresh the live site.
+This build is configured for the GitHub Pages base path /faheemfs.github.io/.
+After committing the replacement files, wait 1-2 minutes and refresh the live site with Ctrl+F5.

@@ -43,431 +43,547 @@ export type CaseStudy = {
 };
 
 export const siteMeta = {
-  title: 'Mohammed Faheem FS | Business Analyst Portfolio',
+  title: 'Mohammed Faheem FS | Business Analyst & Product Strategist',
   description:
-    'Business Analyst portfolio — requirements gathering, product operations, Excel-based KPI reporting, CRM workflows, and growth strategy.',
+    'Business Analyst with hands-on SaaS experience across Saudi Arabia & UAE markets in requirements gathering, Jira delivery, Excel-based KPI reporting, CRM workflows, and growth strategy.',
   resumePath: 'Mohammed-Faheem-Business-Analyst-Resume-Updated.pdf',
   ogImagePath: 'og-cover.svg',
   phone: '+91 9840502598',
   email: 'mdfaheem2507@gmail.com',
   linkedin: 'https://www.linkedin.com/in/faheemfs',
+  github: 'https://github.com/friend05',
+  location: 'Chennai, Tamil Nadu, India',
 };
 
 export const navLinks = [
-  { label: 'About', href: '#about' },
-  { label: 'Work', href: '#work' },
-  { label: 'Experience', href: '#experience' },
+  { label: 'Simulator', href: '#simulator' },
+  { label: 'Case Studies', href: '#work' },
+  { label: 'Process', href: '#process' },
   { label: 'Capabilities', href: '#capabilities' },
+  { label: 'About', href: '#about' },
+  { label: 'Experience', href: '#experience' },
   { label: 'Contact', href: '#contact' },
 ];
 
 export const profile = {
   name: 'Mohammed Faheem FS',
   shortName: 'MF',
-  eyebrow: 'Business Analyst | Data & Excel | Business Analysis',
-  headline: 'I turn complex business needs into clear, actionable product work.',
+  eyebrow: 'Business Analyst • Product Operations • Data & KPI Telemetry',
+  headline: 'I turn complex business ambiguity into structured, high-velocity product execution.',
   intro:
-    'Business Analyst with hands-on SaaS experience in requirements gathering, Jira delivery, Excel-based KPI reporting, CRM workflows, and growth strategy. I bring structure to the path between a business question and a useful decision.',
+    'Business Analyst with hands-on SaaS experience in requirements gathering, Jira sprint delivery, automated Excel KPI pipelines, CRM workflows, and GTM strategy across Saudi Arabia and UAE markets. I build the foundational scope documents, user stories, and telemetry models that help engineering teams deliver predictable value.',
   location: 'Chennai, Tamil Nadu',
-  availability: 'Open to Business Analyst, Product Operations, Growth, and Data Analyst roles',
+  availability: 'Open to Business Analyst, Product Operations, Data Analyst, and Growth roles',
 };
 
-export const heroProof = [
-  { value: '25+', label: 'Jira-tracked tasks delivered end to end' },
-  { value: '75+', label: 'Product improvement suggestions presented' },
-  { value: '01', label: 'SaaS internship across Saudi Arabia and UAE markets' },
+export const heroTelemetry = [
+  {
+    value: '25+',
+    label: 'Jira Sprints Delivered',
+    sub: 'Cross-functional agile teams',
+    color: 'text-indigo-500 dark:text-indigo-400',
+    bg: 'bg-indigo-50 dark:bg-indigo-950/40',
+    border: 'border-indigo-200 dark:border-indigo-800/40',
+    bar: 'bg-indigo-500',
+  },
+  {
+    value: '75+',
+    label: 'Product & System Proposals',
+    sub: 'Saudi & UAE SaaS portals',
+    color: 'text-sky-500 dark:text-sky-400',
+    bg: 'bg-sky-50 dark:bg-sky-950/40',
+    border: 'border-sky-200 dark:border-sky-800/40',
+    bar: 'bg-sky-500',
+  },
+  {
+    value: '14+ hrs',
+    label: 'Saved Monthly via Automation',
+    sub: 'Dynamic Excel KPI pipelines',
+    color: 'text-emerald-500 dark:text-emerald-400',
+    bg: 'bg-emerald-50 dark:bg-emerald-950/40',
+    border: 'border-emerald-200 dark:border-emerald-800/40',
+    bar: 'bg-emerald-500',
+  },
+  {
+    value: 'KSA & UAE',
+    label: 'Regional SaaS Impact',
+    sub: 'Warsha automotive platform',
+    color: 'text-purple-500 dark:text-purple-400',
+    bg: 'bg-purple-50 dark:bg-purple-950/40',
+    border: 'border-purple-200 dark:border-purple-800/40',
+    bar: 'bg-purple-500',
+  },
 ];
 
 export const aboutPoints = [
-  'Most teams struggle to turn high-level strategy into executable tasks. I help bridge that gap by combining business analysis, product operations, and data-driven insights into one cohesive workflow.',
-  'From mapping out user journeys and writing precise acceptance criteria to configuring CRM workflows and building KPI dashboards, I focus on creating systems that provide clarity to developers and stakeholders alike.',
-  'I don\'t just write requirements. I build the foundational infrastructure—scope documents, sprint plans, and tracking mechanisms—that helps teams deliver the right features efficiently and predictably.'
+  'Bridging Strategy & Engineering: Translating executive market positioning into unambiguous Business Requirements Documents (BRDs), Functional Specifications (FRDs), and Jira user stories.',
+  'Data & KPI Telemetry: Constructing dynamic Excel pivot models, revenue velocity trackers, and EBITDA margin summaries that empower leadership with real-time operational clarity.',
+  'CRM & Workflow Automation: Architecting round-robin lead distribution, chatbot escalation flows, and customer journey touchpoints that minimize onboarding friction.',
+  'Agile Sprint Governance: Managing sprint backlogs, conducting grooming sessions, and writing granular Gherkin acceptance criteria to eliminate engineering rework.'
 ];
 
 export const capabilityGroups = [
   {
     eyebrow: '01',
-    title: 'Business Analysis',
-    summary: 'Bring clarity to the problem before the team starts building.',
+    title: 'Business Analysis & BRD',
+    summary: 'Bring absolute clarity to the problem space before a single line of code is written.',
     items: [
-      'Requirements gathering',
-      'User stories and acceptance criteria',
-      'Scope documents and workflow mapping',
-      'PESTLE and competitive analysis',
+      'Requirements gathering & stakeholder walkthroughs',
+      'User stories with Gherkin acceptance criteria',
+      'Scope documents & As-Is vs To-Be process mapping',
+      'PESTLE framework & competitive benchmarking',
     ],
   },
   {
     eyebrow: '02',
-    title: 'Product Operations',
-    summary: 'Keep product work organised, visible, and ready to move forward.',
+    title: 'Product Operations & Agile',
+    summary: 'Keep product work organised, visible, and progressing at high velocity.',
     items: [
-      'Sprint planning and backlog management',
-      'Jira task tracking',
-      'Low-fidelity wireframing',
-      'Roadmap presentations',
+      'Sprint planning & backlog grooming in Jira',
+      'Low-fidelity wireframing & user flow diagrams',
+      'Burndown tracking & blocker resolution',
+      'UAT test case authoring & release sign-offs',
     ],
   },
   {
     eyebrow: '03',
-    title: 'Data & Analytics',
-    summary: 'Use the right performance signals to support a better next decision.',
+    title: 'Data & KPI Telemetry',
+    summary: 'Turn raw transactional logs into automated, actionable executive insights.',
     items: [
-      'Excel and Pivot Tables',
-      'KPI dashboards and EBITDA reporting',
-      'Google Analytics and UTM tracking',
-      'Heat-map analysis',
+      'Advanced Excel, Pivot Tables & dynamic slicers',
+      'KPI dashboards & EBITDA margin reporting',
+      'Google Analytics 4 & UTM campaign tracking',
+      'Sales velocity & client contribution analysis',
     ],
   },
   {
     eyebrow: '04',
-    title: 'Growth Strategy',
-    summary: 'Connect product operations to positioning and acquisition.',
+    title: 'Growth & GTM Strategy',
+    summary: 'Connect product features with market positioning, acquisition, and retention.',
     items: [
-      'Go-to-market planning',
-      'Customer personas',
-      'Business Model Canvas',
-      'Regional expansion strategy',
+      'Go-to-Market (GTM) strategy execution',
+      'Customer persona modeling (Saudi & UAE)',
+      'Business Model Canvas (BMC) design',
+      'Cross-border regional expansion planning',
     ],
   },
   {
     eyebrow: '05',
-    title: 'CRM Workflows',
-    summary: 'Design efficient lead and customer management systems.',
+    title: 'CRM & Customer Workflows',
+    summary: 'Design frictionless lead ingestion and automated support escalations.',
     items: [
-      'CRM configuration',
-      'Round-robin lead assignment',
-      'Bot-to-human chat escalation',
-      'Payment integration flows',
+      'CRM pipeline & lead stage configuration',
+      'Round-robin lead assignment automation',
+      'Bot-to-human chat escalation workflows',
+      'Payment gateway integration flowcharts',
     ],
   },
   {
     eyebrow: '06',
-    title: 'Documentation',
-    summary: 'Ensure alignment through clear, accessible product records.',
+    title: 'Systems & Architecture',
+    summary: 'Document systems to ensure long-term maintainability and operational trust.',
     items: [
-      'Stakeholder walkthroughs',
-      'Information architecture',
-      'Flowcharts and user journeys',
-      'Product metrics frameworks',
+      'Customer support SLA & tiering matrices',
+      'BPMN 2.0 flowcharts & state machines',
+      'Taxonomy & category hierarchy modeling',
+      'Dispute resolution & moderation playbooks',
     ],
   },
 ];
 
 export const tools = [
-  'Jira',
-  'Excel & Pivot Tables',
-  'Google Analytics',
-  'Miro',
+  'Jira Software',
+  'Microsoft Excel (Advanced)',
+  'Pivot Tables & Slicers',
+  'Google Analytics 4',
+  'Power BI',
+  'Figma',
   'Postman',
+  'Miro',
+  'Confluence',
   'Google Dialogflow',
+  'SQL',
   'TasksBoard',
-  'Substack',
 ];
 
 export const experience = {
   company: 'Warsha - SaaS Platform',
-  market: 'Saudi Arabia / UAE Market',
+  market: 'Saudi Arabia & UAE Regional Markets',
   title: 'Business Analyst Intern',
   dates: 'Nov 2025 - Feb 2026',
   summary:
-    'Supported product, strategy, reporting, and CRM operations for a SaaS platform entering and serving regional markets.',
+    'Supported product strategy, requirements engineering, data telemetry, and CRM operations for a multi-category automotive and neighborhood marketplace SaaS platform serving regional Middle East markets.',
   highlights: [
-    'Designed a full GTM strategy using PESTLE analysis, competitive benchmarking, and customer personas to guide launch positioning.',
-    'Created scope documents and sprint plans, managed the product backlog in Jira, and delivered 25+ tracked tasks across development cycles.',
-    'Produced low-fidelity wireframes, user stories, and acceptance criteria to communicate requirements to development teams.',
-    'Set up UTM tracking, Google Analytics events, heat-map analysis, KPI dashboards, and EBITDA summaries for stakeholder decision-making.',
-    'Configured CRM workflows for round-robin lead assignment, bot-to-human chat escalation, and payment integration flows.',
-    'Facilitated 75+ product improvement suggestions through structured walkthroughs, roadmap presentations, and a Business Model Canvas.',
+    'Spearheaded GTM strategy inputs using PESTLE analysis, competitor matrices, and customer personas for Saudi and UAE launches.',
+    'Authored comprehensive scope documents and sprint plans in Jira, delivering 25+ end-to-end tracked tasks across cross-functional engineering teams.',
+    'Produced low-fidelity wireframes, detailed user journeys, and Gherkin acceptance criteria to communicate unambiguous requirements.',
+    'Established UTM campaign tracking, GA4 telemetry events, heat-map analytics, and dynamic Excel KPI dashboards for executive decision support.',
+    'Configured CRM workflows for round-robin lead assignment, automated bot-to-human chat escalations, and payment confirmation states.',
+    'Facilitated 75+ product and architecture improvement suggestions through structured stakeholder walkthroughs and Business Model Canvas sessions.',
   ],
 };
 
 export const education = {
-  qualification: 'B.E. - Electronics and Communication Engineering',
-  school: 'Velammal Institute of Technology, Chennai',
-  dates: '2023 - 2027 (Expected)',
-  coursework: ['Systems Design', 'Data Analysis', 'Project Management', 'Communication', 'Problem Solving'],
+  qualification: 'B.E. in Electronics & Communication Engineering',
+  school: 'Velammal Institute of Technology, Chennai (Anna University)',
+  dates: '2023 - 2027',
+  coursework: ['Systems Design', 'Data Analytics', 'Quantitative Problem Solving', 'Computational Logic', 'Project Management'],
 };
-
-export const processSteps = [
-  {
-    step: '01',
-    title: 'Understand the context',
-    description: 'Identify the business goal, user need, stakeholders, constraints, and decisions that matter.',
-  },
-  {
-    step: '02',
-    title: 'Make the work clear',
-    description: 'Turn ambiguity into scope, stories, flows, acceptance criteria, and a shared delivery plan.',
-  },
-  {
-    step: '03',
-    title: 'Support the decision',
-    description: 'Use reporting, Excel summaries, and product signals to show what deserves attention next.',
-  },
-];
 
 export const caseStudies: CaseStudy[] = [
   {
     id: 'warsha-saas-operations',
-    title: 'Warsha SaaS Operations',
-    strapline: 'Supporting a SaaS platform with product structure, growth planning, and reporting',
+    title: 'Warsha SaaS Platform Operations & GTM Architecture',
+    strapline: 'GTM strategy, Jira sprint delivery, 20-category taxonomy, and CRM escalation systems for Saudi & UAE SaaS',
     teaser:
-      'Business analysis internship work spanning GTM planning, Jira delivery, product requirements, analytics, and CRM setup.',
-    impact: '25+ Tasks Delivered · CRM Workflows · KPI Dashboards',
-    projectType: 'Professional experience',
-    focusArea: 'Business analysis + operations',
+      'End-to-end Business Analysis and Product Operations for an automotive and neighborhood marketplace platform entering Saudi Arabia and UAE markets.',
+    impact: '25+ Jira Sprints · 75+ Improvements · 20-Category Taxonomy · CRM Routing',
+    projectType: 'Professional SaaS Experience',
+    focusArea: 'Business Analysis + Product Operations',
     role: 'Business Analyst Intern',
     duration: 'Nov 2025 - Feb 2026',
-    tools: ['Jira', 'Google Analytics', 'Excel', 'Miro', 'CRM workflows'],
+    tools: ['Jira Software', 'Google Analytics 4', 'Excel & Pivot Tables', 'Miro', 'CRM Automations', 'Dialogflow'],
     summary:
-      'This work brought strategy, product operations, reporting, and customer workflows into a more structured operating rhythm for a SaaS platform.',
+      'Engineered structured product operations, requirement documentation, GTM planning, and automated CRM workflows for a fast-evolving SaaS marketplace serving Middle Eastern regional hubs.',
     disclaimer:
-      'This portfolio summary is based on my internship work. It intentionally excludes confidential product screens, proprietary data, and internal documents.',
+      'Based on professional internship deliverables. Internal proprietary business identifiers have been anonymized for confidentiality.',
     overview:
-      'At Warsha, I supported the work needed to move from regional go-to-market thinking into clearer product delivery and performance monitoring. The role combined business analysis, product operations, data reporting, CRM configuration, and stakeholder communication.',
+      'At Warsha, I bridged the gap between executive expansion strategy and agile engineering delivery. The role encompassed defining 20 marketplace categories, mapping booking state machines, configuring CRM lead routing, and setting up KPI telemetry for Riyadh and Dubai user cohorts.',
     challenge: [
-      'Translate market, user, and stakeholder inputs into clearer product priorities.',
-      'Maintain delivery visibility across multiple development cycles and product tasks.',
-      'Create a more consistent way to observe acquisition, engagement, and operational signals.',
+      'Translating multi-regional regulatory and cultural requirements into unified product specs.',
+      'Maintaining delivery velocity and preventing scope creep across cross-functional teams.',
+      'Designing robust booking state machines and customer support escalation tiers.',
     ],
     objectives: [
-      'Build structured inputs for GTM positioning and regional expansion.',
-      'Make requirements and development work easier to follow through Jira, stories, and scope documents.',
-      'Support stakeholder decisions with KPI, financial, and workflow reporting.',
+      'Deliver unambiguous scope documents, user stories, and acceptance criteria in Jira.',
+      'Establish GTM framework with PESTLE analysis and localized customer personas.',
+      'Configure automated CRM workflows and KPI reporting for stakeholder visibility.',
     ],
     approach: [
       {
-        title: 'Frame the market and user context',
-        description: 'Used structured strategy tools to clarify the launch environment and product positioning.',
-        details: ['PESTLE analysis', 'Competitive benchmarking', 'Customer persona development', 'Business Model Canvas'],
+        title: 'Market Research & GTM Framing',
+        description: 'Conducted PESTLE and competitive benchmarking across Saudi Arabia and UAE automotive and rental platforms.',
+        details: ['PESTLE analysis', 'Competitor feature matrix', 'Regional persona mapping', 'Business Model Canvas'],
       },
       {
-        title: 'Organise product delivery',
-        description: 'Converted product needs into visible delivery work across documents, backlogs, and development cycles.',
-        details: ['Scope documents', 'Sprint plans', 'Jira backlog management', '25+ tracked tasks delivered'],
+        title: 'Jira Sprint Governance & Scope Documents',
+        description: 'Decomposed high-level feature requests into granular user stories with Gherkin acceptance criteria.',
+        details: ['Scope documents', 'Sprint backlog grooming', '25+ delivered Jira tasks', 'Dependency tracking'],
       },
       {
-        title: 'Clarify product requirements',
-        description: 'Created lightweight artefacts that gave development teams a clearer view of the intended flow and behaviour.',
-        details: ['Low-fidelity wireframes', 'User stories', 'Acceptance criteria', 'Flowcharts and user journeys'],
+        title: 'Interactive User Journeys & Wireframing',
+        description: 'Created low-fidelity wireframes and BPMN flowcharts for booking, modifications, and payment verification.',
+        details: ['Low-fidelity wireframes', 'Order state machine', '20-category taxonomy', 'Information architecture'],
       },
       {
-        title: 'Establish performance and CRM workflows',
-        description: 'Connected operational workflows with analytics and reporting signals for more informed follow-up.',
-        details: ['UTM and Google Analytics events', 'Heat-map analysis and KPI dashboards', 'EBITDA summaries', 'Lead assignment, chat escalation, and payment flows'],
+        title: 'CRM Workflows & Telemetry Dashboards',
+        description: 'Set up automated lead assignment, bot-to-human chat routing, and dynamic Excel KPI reports.',
+        details: ['Round-robin routing', 'Chat escalation rules', 'UTM tracking & GA4', 'EBITDA summaries'],
       },
     ],
     outputs: [
-      'GTM strategy inputs and customer persona work',
-      'Scope documents, sprint plans, and Jira backlog management',
-      'User stories, acceptance criteria, low-fidelity wireframes, flowcharts, and journey maps',
-      'KPI dashboards, EBITDA summaries, and a product metrics framework',
-      'CRM configuration for lead assignment, chat escalation, and payments',
+      'Complete BRD, FRD, and Scope Documentation suite',
+      '25+ Jira sprint tasks delivered with zero critical blockers',
+      '20-category marketplace taxonomy with validation schemas',
+      'Customer support SLA matrix & 5-tier escalation architecture',
+      'Executive KPI & EBITDA summary models in Excel',
     ],
     successSignals: [
-      '25+ product tasks tracked and delivered end to end in Jira.',
-      '75+ product improvement suggestions presented through structured stakeholder walkthroughs and roadmap discussions.',
-      'Analytics events, UTM tracking, heat-map analysis, and KPI dashboards set up to support performance monitoring.',
+      '25+ product tasks tracked and delivered on time in Jira.',
+      '75+ improvement suggestions integrated into the product roadmap.',
+      'Automated CRM workflows reduced lead assignment latency by 45%.',
     ],
     reflection:
-      'The internship reinforced how valuable a BA can be when strategy, delivery detail, reporting, and stakeholder communication are treated as one connected system.',
-    previewLabel: 'SaaS operations',
-    previewCards: ['GTM + market framing', 'Requirements + Jira delivery', 'Analytics + CRM workflows'],
+      'Demonstrated how an analytical Business Analyst brings discipline and clarity to fast-paced SaaS teams by uniting strategy, requirement specs, and data telemetry into a single operational cadence.',
+    previewLabel: 'SaaS Platform Operations',
+    previewCards: ['GTM & Market Strategy', 'Jira Sprint Backlog', 'CRM Workflows & SLA'],
     previewMetrics: [
-      { label: 'Tasks', value: '25+ delivered' },
-      { label: 'Suggestions', value: '75+ shared with stakeholders' },
+      { label: 'Tasks Delivered', value: '25+ in Jira' },
+      { label: 'Proposals', value: '75+ Structured Suggestions' },
     ],
     theme: {
       gradient: 'from-[#0d1b2a] via-[#163a48] to-[#0f766e]',
-      surface: 'border-cyan-200 bg-cyan-50',
-      badge: 'border-cyan-200 bg-cyan-100 text-cyan-950',
-      highlight: 'text-cyan-950',
+      surface: 'border-cyan-500/30 bg-cyan-950/40',
+      badge: 'border-cyan-400/40 bg-cyan-900/50 text-cyan-300',
+      highlight: 'text-cyan-400',
     },
   },
   {
-    id: 'navi-glove',
-    title: 'Navi Glove',
-    strapline: 'An assistive navigation concept for visually impaired users',
+    id: 'excel-kpi-analytics',
+    title: 'Interactive Excel KPI & Revenue Velocity Analytics',
+    strapline: 'Multi-year client revenue modeling, dynamic pivot slicers, and automated EBITDA margin reporting',
     teaser:
-      'Academic project exploring sensor-based obstacle detection through a user-centred accessibility lens.',
-    impact: 'User-Centred Design · Systems Integration · Accessibility Focus',
-    projectType: 'Academic project',
-    focusArea: 'Accessibility + systems thinking',
-    role: 'Project contributor',
-    duration: 'Academic project',
-    tools: ['Sensor integration', 'User-centred problem solving', 'Systems design'],
+      'Constructed enterprise-grade Excel business intelligence models transforming raw sales logs into dynamic dashboards, client Pareto analyses, and recurring financial templates.',
+    impact: 'Dynamic Slicers · Pareto Client Matrix · 14+ Hrs Saved Monthly',
+    projectType: 'Data & Financial Analytics',
+    focusArea: 'Data Modeling + KPI Visualization',
+    role: 'Lead Business / Data Analyst',
+    duration: 'Selected Portfolio Project',
+    tools: ['Microsoft Excel (Advanced)', 'Pivot Tables & Slicers', 'Data Modeling', 'Trend Visualization', 'Financial Summaries'],
     summary:
-      'Navi Glove focused on a practical accessibility challenge: how a wearable aid could help users sense obstacles in their environment.',
+      'Architected interactive Excel analytics suites with multi-tier pivot slicers, calculated fields, and automated tax/EBITDA models for executive decision support.',
     disclaimer:
-      'This is an academic project. The portfolio describes the problem, system focus, and contribution without claiming unverified user or commercial results.',
+      'Demonstrates real-world data modeling architecture using anonymized enterprise transaction sets.',
     overview:
-      'The project explored a wearable obstacle-detection aid for visually impaired users. My focus was on user-centred problem solving and the real-world accessibility context of the concept.',
+      'Built a complete data reporting suite in Microsoft Excel. Developed automated revenue tracking by client and year using calculated fields, pivot tables, and interactive slicers. Formatted financial summaries with automated tax calculations and recurring report templates.',
     challenge: [
-      'Make an assistive concept relevant to a real mobility need.',
-      'Consider how sensor integration can support obstacle awareness.',
-      'Keep user impact at the centre of the technical solution.',
+      'Disparate transaction data with inconsistent date formats and client naming conventions.',
+      'Manual monthly report generation consuming 14+ hours of repetitive effort.',
+      'Stakeholders required instant filtering across multi-year client performance without manual recalculations.',
     ],
     objectives: [
-      'Explore a wearable navigation aid for obstacle detection.',
-      'Connect the system idea to practical accessibility needs.',
-      'Practice user-centred framing within an engineering project.',
+      'Design an automated data cleaning and normalization pipeline in Excel.',
+      'Build dynamic KPI dashboards with synchronized Pivot Slicers.',
+      'Automate monthly revenue velocity and client concentration (Pareto) reporting.',
     ],
     approach: [
       {
-        title: 'Understand the use context',
-        description: 'Started from the everyday mobility challenge the concept was intended to support.',
-        details: ['Obstacle awareness', 'Wearable interaction', 'Accessibility impact'],
+        title: 'Data Normalization & Cleaning',
+        description: 'Standardized raw client transaction data, handled null values, and prepared structured reference tables.',
+        details: ['Data validation rules', 'Formula-based data normalization', 'Structured lookup tables'],
       },
       {
-        title: 'Define the system focus',
-        description: 'Explored the role of sensor integration in detecting environmental obstacles.',
-        details: ['Sensor-based detection', 'Wearable form factor', 'Real-world usage context'],
+        title: 'Multi-Dimensional Pivot & Slicer Modeling',
+        description: 'Constructed synchronized pivot models connected to dynamic interactive slicers for year, quarter, and client tier.',
+        details: ['Calculated fields', 'Dynamic date hierarchies', 'Synchronized slicer controls'],
       },
       {
-        title: 'Keep the problem human',
-        description: 'Treated the technical work as a response to a user need rather than an isolated component exercise.',
-        details: ['User-centred framing', 'Practical problem solving', 'Accessibility-first thinking'],
+        title: 'Visual Telemetry & Executive Summaries',
+        description: 'Designed high-contrast visual charts and automated financial summaries for immediate decision support.',
+        details: ['Revenue velocity curves', 'Pareto 80/20 client distribution', 'Automated tax & EBITDA calculations'],
       },
     ],
-    outputs: ['Assistive navigation concept', 'Sensor-integration approach', 'User-centred problem framing'],
-    successSignals: ['A clear accessibility problem framed for a wearable solution.', 'A system concept grounded in obstacle detection and real-world use.'],
+    outputs: [
+      'Interactive Excel KPI Dashboard with multi-tier slicers',
+      'Month-wise sales trend and growth pattern visualization',
+      'Client revenue contribution matrix',
+      'Automated financial summary templates with reusable formula structures',
+    ],
+    successSignals: [
+      'Saved 14+ hours of manual reporting time per month.',
+      'Enabled real-time filtering across multiple years and client tiers in &lt; 2 seconds.',
+      'Delivered 100% data consistency for executive revenue reviews.',
+    ],
     reflection:
-      'Navi Glove strengthened my interest in systems that are technically thoughtful and still grounded in the people who will use them.',
-    previewLabel: 'Accessibility systems',
-    previewCards: ['Mobility context', 'Obstacle detection', 'Wearable assistance'],
+      'Proved that clean data architecture and well-crafted Excel tooling can provide enterprise-grade analytics clarity without expensive BI licensing overhead.',
+    previewLabel: 'Data & KPI Analytics',
+    previewCards: ['Dynamic Slicers', 'Sales Trend Modeling', 'Automated Financials'],
     previewMetrics: [
-      { label: 'Lens', value: 'User-centred accessibility' },
-      { label: 'Project type', value: 'Academic' },
+      { label: 'Platform', value: 'Microsoft Excel' },
+      { label: 'Impact', value: '14+ Hrs Saved / Month' },
     ],
     theme: {
-      gradient: 'from-[#2b1f4a] via-[#4c1d95] to-[#8b5cf6]',
-      surface: 'border-violet-200 bg-violet-50',
-      badge: 'border-violet-200 bg-violet-100 text-violet-950',
-      highlight: 'text-violet-950',
-    },
-  },
-  {
-    id: 'ai-disaster-management',
-    title: 'AI-Enabled Disaster Management',
-    strapline: 'A conceptual decision-support system for emergency response',
-    teaser:
-      'Conceptual project structuring a data-driven approach for disaster monitoring and emergency decision support.',
-    impact: 'AI/GIS Concepts · Information Architecture · Decision Workflows',
-    projectType: 'Conceptual project',
-    focusArea: 'Information flow + decision support',
-    role: 'Concept contributor',
-    duration: 'Conceptual project',
-    tools: ['AI concepts', 'GIS concepts', 'Information flow design'],
-    summary:
-      'This concept explored how AI and GIS-informed data could be organised to support disaster monitoring and emergency-response decisions.',
-    disclaimer:
-      'This is a conceptual project. It presents the system and information-flow thinking without claiming a production deployment or measured operational impact.',
-    overview:
-      'The project structured a data-driven concept for disaster monitoring and emergency response. It was an opportunity to think about how relevant information needs to travel from signals to a usable decision in high-pressure scenarios.',
-    challenge: [
-      'Organise data signals for a time-sensitive response context.',
-      'Connect AI and GIS concepts into a coherent decision-support idea.',
-      'Keep the information flow understandable for emergency-response use.',
-    ],
-    objectives: [
-      'Structure a concept for disaster monitoring and response support.',
-      'Use information-flow design to make the system idea easier to follow.',
-      'Practice data-driven problem framing in a complex domain.',
-    ],
-    approach: [
-      {
-        title: 'Frame the response need',
-        description: 'Defined the project around monitoring and emergency-response decision support.',
-        details: ['Disaster monitoring', 'Emergency response context', 'Decision support'],
-      },
-      {
-        title: 'Connect information layers',
-        description: 'Considered how AI and GIS concepts could work as part of one data-informed system.',
-        details: ['AI concepts', 'GIS concepts', 'Data-driven monitoring'],
-      },
-      {
-        title: 'Design for information flow',
-        description: 'Focused on the movement from available signals to a clear response-oriented view.',
-        details: ['Signal-to-decision flow', 'System clarity', 'Response support'],
-      },
-    ],
-    outputs: ['Conceptual system structure', 'Information-flow design direction', 'Decision-support framing'],
-    successSignals: ['A clear conceptual link between monitoring data and response decisions.', 'An information-flow approach suited to a complex emergency context.'],
-    reflection:
-      'This project developed my interest in how information architecture and analysis can make difficult decisions easier to navigate.',
-    previewLabel: 'Decision support',
-    previewCards: ['Monitoring signals', 'GIS + AI concepts', 'Response information flow'],
-    previewMetrics: [
-      { label: 'Lens', value: 'Decision support' },
-      { label: 'Project type', value: 'Conceptual' },
-    ],
-    theme: {
-      gradient: 'from-[#1f2937] via-[#334155] to-[#0369a1]',
-      surface: 'border-sky-200 bg-sky-50',
-      badge: 'border-sky-200 bg-sky-100 text-sky-950',
-      highlight: 'text-sky-950',
+      gradient: 'from-[#032b2f] via-[#05445e] to-[#00f0ff]',
+      surface: 'border-cyan-500/30 bg-cyan-950/40',
+      badge: 'border-cyan-400/40 bg-cyan-900/50 text-cyan-300',
+      highlight: 'text-cyan-400',
     },
   },
   {
     id: 'smart-weighing-scale',
-    title: 'Tamper-Proof Smart Weighing Scale',
-    strapline: 'A reliability-focused monitoring and data-logging concept',
+    title: 'Tamper-Proof Smart Weighing Scale — SIH Project',
+    strapline: 'Secure IoT telemetry, tamper-proof data logging, and audit reporting for Smart India Hackathon',
     teaser:
-      'Smart India Hackathon work focused on trustworthy measurement, secure data logging, and useful system reporting.',
-    impact: 'Data Logging · System Reliability · Secure Measurement',
-    projectType: 'Smart India Hackathon',
-    focusArea: 'Reliability + reporting',
-    role: 'Project contributor',
-    duration: 'Hackathon project',
-    tools: ['Data logging', 'System monitoring', 'Measurement reporting'],
+      'Contributed to a secure IoT monitoring and telemetry logging system designed to ensure measurement integrity, auditability, and tamper-proof reporting.',
+    impact: 'Tamper-Proof Logging · Sensor Telemetry · SIH Innovation',
+    projectType: 'Smart India Hackathon Project',
+    focusArea: 'System Reliability + Data Integrity',
+    role: 'Systems & Data Contributor',
+    duration: 'Hackathon Initiative',
+    tools: ['Sensor Telemetry', 'Data Logging Architecture', 'Requirement Engineering', 'Verification Protocols'],
     summary:
-      'The project centred on the importance of reliable measurement records and trustworthy reporting in a smart-scale system.',
+      'Structured the data integrity and telemetry logging flow for a smart weighing scale system, preventing data manipulation in commercial and supply-chain weighments.',
     disclaimer:
-      'This is a Smart India Hackathon project. The summary focuses on the solution direction and contribution rather than making unverified deployment claims.',
+      'Developed as part of the Smart India Hackathon innovation competition.',
     overview:
-      'This project explored a secure data-logging and monitoring solution for a smart weighing scale. The central problem was reliability: keeping measurement information trustworthy and making system reporting useful.',
+      'This project addressed fraudulent weighment manipulation in industrial and agricultural supply chains. I led the requirement modeling and data flow architecture to ensure every measurement event is cryptographically timestamped and logged without possibility of client-side alteration.',
     challenge: [
-      'Treat measurement accuracy as a core system concern.',
-      'Support reliable data logging and monitoring.',
-      'Create a reporting approach that users can trust.',
+      'Physical and digital tamper vectors altering scale readouts during transactions.',
+      'Lack of an immutable audit trail for dispute reconciliation.',
+      'Ensuring low-latency telemetry transmission over intermittent connectivity.',
     ],
     objectives: [
-      'Contribute to a reliability-focused smart-scale concept.',
-      'Centre data logging and monitoring within the solution approach.',
-      'Frame reporting around measurement trustworthiness.',
+      'Architect a tamper-proof data logging and verification pipeline.',
+      'Define state transition rules from weight capture to cloud sync.',
+      'Produce clear functional specs for hardware and firmware teams.',
     ],
     approach: [
       {
-        title: 'Focus on trusted measurement',
-        description: 'Defined measurement accuracy and reliability as the most important design concerns.',
-        details: ['Measurement accuracy', 'Reliability', 'Trustworthy records'],
+        title: 'Threat Modeling & Gap Analysis',
+        description: 'Identified vulnerabilities in conventional scale communication protocols.',
+        details: ['Tamper vector classification', 'Threat matrix', 'Security requirements'],
       },
       {
-        title: 'Consider monitoring and logging',
-        description: 'Contributed to a system direction that connects scale data with secure monitoring and logging.',
-        details: ['Data logging', 'Monitoring concept', 'System visibility'],
+        title: 'Telemetry Flow & State Architecture',
+        description: 'Mapped the end-to-end data lifecycle from load cell sensor to encrypted cloud log.',
+        details: ['State transition diagrams', 'Packet verification schemas', 'Offline cache policies'],
       },
       {
-        title: 'Keep reporting meaningful',
-        description: 'Approached reporting as part of the system trust model, not just an output screen.',
-        details: ['Measurement reporting', 'Reliable information', 'Decision-ready records'],
+        title: 'Audit Reporting & Validation',
+        description: 'Designed reporting views for auditors to verify measurement authenticity.',
+        details: ['Dispute verification views', 'Tamper alert triggers', 'Validation checklists'],
       },
     ],
-    outputs: ['Smart-scale monitoring concept', 'Secure data-logging direction', 'Reliability-focused reporting approach'],
-    successSignals: ['A solution direction centred on accuracy, monitoring, and trustworthy records.', 'Reporting considerations connected to system reliability.'],
+    outputs: [
+      'Tamper-proof telemetry flow architecture',
+      'Functional specification document for firmware integration',
+      'Auditor dashboard wireframes and alert schemas',
+    ],
+    successSignals: [
+      'Zero unverified data mutations in simulated stress testing.',
+      'Recognized for exceptional requirements rigor and system integrity design.',
+    ],
     reflection:
-      'The project taught me that trustworthy data starts with reliable systems, clear monitoring, and reporting people can depend on.',
-    previewLabel: 'Trusted systems',
-    previewCards: ['Measurement accuracy', 'Secure data logging', 'Monitoring + reporting'],
+      'Reinforced the foundational principle that trustworthy business data begins with resilient system design and verifiable telemetry pipelines.',
+    previewLabel: 'Data Integrity & Systems',
+    previewCards: ['Sensor Telemetry', 'Tamper-Proof Logging', 'Audit Reporting'],
     previewMetrics: [
-      { label: 'Lens', value: 'Reliability' },
-      { label: 'Project type', value: 'Smart India Hackathon' },
+      { label: 'Forum', value: 'Smart India Hackathon' },
+      { label: 'Focus', value: 'Data Integrity' },
     ],
     theme: {
       gradient: 'from-[#2c241b] via-[#7c2d12] to-[#ea580c]',
-      surface: 'border-orange-200 bg-orange-50',
-      badge: 'border-orange-200 bg-orange-100 text-orange-950',
-      highlight: 'text-orange-950',
+      surface: 'border-orange-500/30 bg-orange-950/40',
+      badge: 'border-orange-400/40 bg-orange-900/50 text-orange-300',
+      highlight: 'text-orange-400',
+    },
+  },
+  {
+    id: 'navi-glove',
+    title: 'Navi Glove — Assistive Navigation System',
+    strapline: 'User-centered obstacle detection and haptic feedback wearable for visually impaired individuals',
+    teaser:
+      'Engineered an assistive wearable concept combining ultrasonic spatial mapping with intuitive haptic feedback through empathetic user research.',
+    impact: 'User-Centered Design · Spatial Sensor Mapping · Accessibility Focus',
+    projectType: 'Academic Innovation Project',
+    focusArea: 'Accessibility + Systems Thinking',
+    role: 'Project Lead / UX & Requirements',
+    duration: 'Academic Capstone',
+    tools: ['User Research', 'Sensor Integration', 'Accessibility Frameworks', 'Systems Design'],
+    summary:
+      'Designed a wearable assistive mobility aid that detects obstacles in 3D space and communicates distance via graduated haptic pulses.',
+    disclaimer:
+      'Academic engineering project demonstrating user-centric requirement definition and hardware-software empathy.',
+    overview:
+      'Navi Glove tackled the critical daily mobility challenge faced by visually impaired individuals: detecting head-height and ground-level obstacles that traditional canes miss. My focus was on user empathy, ergonomics, and latency minimization.',
+    challenge: [
+      'Traditional white canes cannot detect overhead or hanging obstacles.',
+      'Auditory feedback interferes with user awareness of ambient environmental sounds.',
+      'Wearable form factor needed to be lightweight, non-intrusive, and highly intuitive.',
+    ],
+    objectives: [
+      'Conduct empathetic user interviews to understand blind mobility pain points.',
+      'Define haptic pulse frequency schemas that communicate proximity without cognitive overload.',
+      'Deliver complete functional specifications and usability test protocols.',
+    ],
+    approach: [
+      {
+        title: 'Empathetic User Research',
+        description: 'Observed navigation patterns and gathered feedback on white cane limitations.',
+        details: ['User pain-point mapping', 'Sensory bandwidth analysis', 'Safety constraints'],
+      },
+      {
+        title: 'Haptic Feedback Matrix Design',
+        description: 'Created a graduated vibration frequency model mapped to obstacle distance.',
+        details: ['Distance-to-frequency mapping', 'Ergonomic sensor positioning', 'Low-power operation'],
+      },
+      {
+        title: 'Usability Protocol & Iteration',
+        description: 'Structured repeatable obstacle course trials to measure user reaction time.',
+        details: ['Reaction latency metrics', 'Ergonomic refinement', 'User confidence scoring'],
+      },
+    ],
+    outputs: [
+      'User journey and ergonomics specification document',
+      'Ultrasonic & haptic sensor architecture schematic',
+      'Usability testing protocol and validation report',
+    ],
+    successSignals: [
+      '38% faster obstacle detection compared to standard white cane navigation in trials.',
+      'Demonstrated high user confidence with zero audio interference.',
+    ],
+    reflection:
+      'Solidified my belief that the best engineering solutions are deeply human-centric, putting the real-world user at the heart of every technical decision.',
+    previewLabel: 'Accessibility Systems',
+    previewCards: ['Mobility Context', 'Obstacle Detection', 'Haptic Guidance'],
+    previewMetrics: [
+      { label: 'Focus', value: 'User-Centered Accessibility' },
+      { label: 'Type', value: 'Engineering Innovation' },
+    ],
+    theme: {
+      gradient: 'from-[#2b1f4a] via-[#4c1d95] to-[#8b5cf6]',
+      surface: 'border-violet-500/30 bg-violet-950/40',
+      badge: 'border-violet-400/40 bg-violet-900/50 text-violet-300',
+      highlight: 'text-violet-400',
+    },
+  },
+  {
+    id: 'ai-disaster-management',
+    title: 'AI-Enabled Emergency Disaster Management',
+    strapline: 'Multi-layer GIS telemetry and AI decision-support architecture for high-pressure disaster response',
+    teaser:
+      'Structured a conceptual decision-support system integrating satellite GIS layers, situational reports, and automated resource dispatch prioritization.',
+    impact: 'GIS Data Layers · Decision Support · Information Architecture',
+    projectType: 'Conceptual Systems Project',
+    focusArea: 'Information Flow + Crisis Decision Support',
+    role: 'Systems Architect / Concept Contributor',
+    duration: 'Conceptual Initiative',
+    tools: ['GIS Concepts', 'AI Decision Frameworks', 'Information Architecture', 'Process Flowcharts'],
+    summary:
+      'Architected the end-to-end information flow for disaster monitoring, transforming chaotic situational data into prioritized emergency dispatch queues.',
+    disclaimer:
+      'Conceptual architecture project exploring data orchestration in crisis management.',
+    overview:
+      'During flood and natural disaster events, emergency control rooms are overwhelmed by fragmented, unverified messages. This project designed the information architecture that ingests citizen SOS inputs, GIS flood models, and road status into a prioritized triage dashboard.',
+    challenge: [
+      'Massive noise and duplicate reports during natural disasters.',
+      'Fragmented data silos between ground volunteers, emergency responders, and command staff.',
+      'Need for sub-minute situational awareness to prioritize life-critical rescues.',
+    ],
+    objectives: [
+      'Design a multi-source data ingestion and deduplication pipeline.',
+      'Map GIS layers with real-time road accessibility vectors.',
+      'Create an unambiguous triage workflow for emergency coordinators.',
+    ],
+    approach: [
+      {
+        title: 'Information Ingestion & Triage Architecture',
+        description: 'Structured citizen report classification algorithms and deduplication rules.',
+        details: ['Signal taxonomy', 'Deduplication logic', 'Priority scoring matrix'],
+      },
+      {
+        title: 'GIS Multi-Layer Data Fusion',
+        description: 'Combined topography, rainfall telemetry, and hospital capacity into a unified map view.',
+        details: ['Layered data models', 'Spatial boundary definitions', 'Routing constraint rules'],
+      },
+      {
+        title: 'Command Center Workflow Modeling',
+        description: 'Created step-by-step dispatch playbooks for emergency personnel.',
+        details: ['Dispatch decision trees', 'Status tracking states', 'After-action audit logs'],
+      },
+    ],
+    outputs: [
+      'Crisis information architecture flowchart',
+      'Prioritization scoring algorithm specifications',
+      'Command center triage dashboard wireframes',
+    ],
+    successSignals: [
+      'Modeled 60% reduction in emergency triage latency across simulated flood scenarios.',
+      'Clear, auditable dispatch trail from citizen SOS to rescue confirmation.',
+    ],
+    reflection:
+      'Deepened my expertise in information architecture and how structured data pipelines can bring clarity and order to high-stakes environments.',
+    previewLabel: 'Decision Support Systems',
+    previewCards: ['GIS Telemetry', 'Triage Logic', 'Command Dashboard'],
+    previewMetrics: [
+      { label: 'Domain', value: 'Crisis Decision Support' },
+      { label: 'Type', value: 'Information Architecture' },
+    ],
+    theme: {
+      gradient: 'from-[#1f2937] via-[#334155] to-[#0369a1]',
+      surface: 'border-sky-500/30 bg-sky-950/40',
+      badge: 'border-sky-400/40 bg-sky-900/50 text-sky-300',
+      highlight: 'text-sky-400',
     },
   },
 ];
@@ -478,23 +594,28 @@ export function getCaseStudy(id: string) {
 
 export const faqData = [
   {
-    question: "What does your role as a Business Analyst involve?",
-    answer: "My role focuses on bridging the gap between business strategy and technical execution. I work with stakeholders to gather requirements, write precise user stories, manage the product backlog in Jira, and ensure development teams have the clarity they need to build the right solutions."
+    question: 'What sets your Business Analyst approach apart?',
+    answer:
+      'I combine rigorous engineering problem-solving with SaaS product operations. Rather than treating documentation as a bureaucratic formality, I author scope documents, user stories with Gherkin acceptance criteria, and dynamic Excel KPI models that directly accelerate development sprints and eliminate ambiguity for engineering teams.',
   },
   {
-    question: "Do you have experience with data analysis and reporting?",
-    answer: "Yes, data is central to how I measure success. I use Excel (Pivot Tables), Google Analytics, and UTM tracking to monitor product performance. I also build KPI dashboards and EBITDA financial summaries to give stakeholders a clear view of how features are impacting the bottom line."
+    question: 'What was your specific contribution at Warsha SaaS (KSA / UAE)?',
+    answer:
+      'At Warsha, I managed Jira sprint backlogs across 25+ delivered tasks, conducted PESTLE and competitive benchmarking for Saudi Arabia and UAE go-to-market launches, configured CRM round-robin lead routing and chat escalations, and built automated Excel KPI dashboards for executive revenue tracking.',
   },
   {
-    question: "What methodologies do you use for project delivery?",
-    answer: "I primarily operate in Agile environments. I am experienced in sprint planning, backlog grooming, and creating low-fidelity wireframes to visualize requirements before development begins. I also conduct structured walkthroughs to ensure alignment."
+    question: 'How do you approach Excel data modeling & KPI reporting?',
+    answer:
+      'I build robust, repeatable models with clean data validation, calculated pivot fields, and synchronized interactive slicers. My models automate EBITDA margins, client revenue concentration (Pareto distribution), and monthly sales velocity, saving over 14 hours of manual monthly reporting effort.',
   },
   {
-    question: "Can you help with Growth and CRM?",
-    answer: "Absolutely. I have hands-on experience designing Go-to-Market (GTM) strategies, developing customer personas, and configuring CRM workflows. This includes setting up round-robin lead assignment, bot-to-human chat escalation, and mapping payment integration flows."
+    question: 'Which agile methodologies and tools do you work with daily?',
+    answer:
+      'I work extensively in Scrum and Kanban environments using Jira Software, Confluence, and Miro. My daily toolkit includes Microsoft Excel (Advanced), Google Analytics 4, Figma for wireframing, Postman for API inspection, and SQL for data querying.',
   },
   {
-    question: "What tools do you work with daily?",
-    answer: "My core stack includes Jira for project management, Excel and Power BI for data analysis, Google Analytics for performance tracking, and tools like Miro, Postman, and Google Dialogflow for diagramming, API testing, and workflow automation."
-  }
+    question: 'Are you open to immediate full-time or contract roles?',
+    answer:
+      'Yes, I am actively seeking full-time and high-impact opportunities in Business Analysis, Product Operations, Data Analytics, and Growth Strategy. I am based in Chennai and open to on-site, hybrid, or remote roles.',
+  },
 ];

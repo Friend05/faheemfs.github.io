@@ -4,7 +4,8 @@ import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  base: '/faheemfs.github.io/',
+  base: process.env.VITE_BASE ?? './',
+
   build: {
     // Keep build artifacts in the output root so manual GitHub uploads
     // work without creating an assets/ folder in the repository.
