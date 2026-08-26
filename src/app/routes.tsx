@@ -1,22 +1,8 @@
-import { createBrowserRouter } from "react-router";
+import { createHashRouter } from "react-router";
 import { Home } from "./pages/Home";
 import { CaseStudyPage } from "./pages/CaseStudyPage";
 
-function getBasename() {
-  if (typeof window !== 'undefined') {
-    const pathname = window.location.pathname;
-    if (pathname.startsWith('/faheemfs.github.io')) {
-      return '/faheemfs.github.io';
-    }
-  }
-  const rawBase = import.meta.env.BASE_URL || '/';
-  if (rawBase !== './' && rawBase !== '.') {
-    return rawBase.replace(/\/$/, '') || '/';
-  }
-  return '/';
-}
-
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   {
     path: "/",
     Component: Home,
@@ -29,6 +15,4 @@ export const router = createBrowserRouter([
     path: "*",
     Component: Home,
   },
-], {
-  basename: getBasename(),
-});
+]);
