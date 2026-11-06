@@ -1,6 +1,6 @@
 import { createHashRouter } from "react-router";
 import { Home } from "./pages/Home";
-import { CaseStudyPage } from "./pages/CaseStudyPage";
+import { CaseStudyPage, AdditionalProjectsPage } from "./pages/CaseStudyPage";
 
 export const router = createHashRouter([
   {
@@ -10,6 +10,10 @@ export const router = createHashRouter([
   {
     path: "/case-study/:id",
     Component: CaseStudyPage,
+  },
+  {
+    path: "/additional-projects",
+    Component: AdditionalProjectsPage,
   },
   {
     path: "*",

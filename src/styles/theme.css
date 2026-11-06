@@ -1,68 +1,27 @@
-@custom-variant dark (&:is(.dark *));
-
 :root {
   --font-size: 16px;
-  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-  --font-display: 'Outfit', 'Space Grotesk', system-ui, sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
-  /* Default Light Tokens */
-  --bg-primary: #f8fafc;
-  --bg-secondary: #ffffff;
-  --bg-card: #ffffff;
-  --bg-card-hover: #f1f5f9;
-  --bg-glass: rgba(255, 255, 255, 0.85);
-  
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --text-muted: #64748b;
-  
-  --border-subtle: rgba(226, 232, 240, 0.9);
-  --border-card: rgba(203, 213, 225, 0.8);
-  --border-glow: rgba(99, 102, 241, 0.2);
-
-  --accent-primary: #4f46e5;
-  --accent-secondary: #8b5cf6;
-  --accent-cyan: #0ea5e9;
-  --accent-emerald: #10b981;
-  --accent-rose: #f43f5e;
-}
-
-.dark {
-  /* Ultra-sleek Dark / Obsidian Tokens */
-  --bg-primary: #08080a;
-  --bg-secondary: #0d111c;
-  --bg-card: rgba(15, 23, 42, 0.65);
-  --bg-card-hover: rgba(30, 41, 59, 0.75);
-  --bg-glass: rgba(13, 17, 28, 0.75);
-
-  --text-primary: #f8fafc;
-  --text-secondary: #cbd5e1;
-  --text-muted: #94a3b8;
-
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-card: rgba(255, 255, 255, 0.12);
-  --border-glow: rgba(99, 102, 241, 0.35);
-
-  --accent-primary: #6366f1;
-  --accent-secondary: #a855f7;
-  --accent-cyan: #00f0ff;
-  --accent-emerald: #34d399;
-  --accent-rose: #fb7185;
+  /* Minimal Off-White & Dark Charcoal Palette */
+  --bg-primary: #faf9f6;
+  --bg-surface: #ffffff;
+  --text-primary: #18181b;
+  --text-secondary: #52525b;
+  --text-muted: #71717a;
+  --border-subtle: #e4e4e7;
+  --accent-muted: #0f766e;
 }
 
 @theme inline {
-  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-  --font-display: 'Outfit', 'Space Grotesk', system-ui, sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
-
-/* ─── Global Base ────────────────────────────────────── */
 
 html {
   font-family: var(--font-sans);
   scroll-behavior: smooth;
-  scroll-padding-top: 5rem;
+  scroll-padding-top: 4.5rem;
 }
 
 body {
@@ -72,107 +31,10 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-display);
-}
-
-code, kbd, samp, pre {
-  font-family: var(--font-mono);
-}
-
-/* ─── Custom Glassmorphism & Cyber Utilities ──────────── */
-
-.glass-card {
-  background: var(--bg-glass);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--border-card);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.glass-card:hover {
-  border-color: var(--border-glow);
-  box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.2);
-}
-
-.dark .glass-card {
-  background: rgba(13, 17, 28, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.dark .glass-card:hover {
-  border-color: rgba(99, 102, 241, 0.4);
-  box-shadow: 0 0 25px rgba(99, 102, 241, 0.15);
-}
-
-.gradient-border {
-  position: relative;
-  border-radius: 1.5rem;
-  background: linear-gradient(60deg, #6366f1, #a855f7, #00f0ff, #10b981);
-  padding: 1px;
-}
-
-.gradient-border > div {
-  background: var(--bg-card);
-  border-radius: inherit;
-}
-
-.text-gradient {
-  background: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.text-gradient-cyan {
-  background: linear-gradient(135deg, #00f0ff 0%, #3b82f6 50%, #8b5cf6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.text-gradient-amber {
-  background: linear-gradient(135deg, #f59e0b 0%, #f97316 50%, #ef4444 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Ambient Radial Mesh */
-.ambient-glow-indigo {
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, rgba(99, 102, 241, 0) 70%);
-}
-
-.ambient-glow-violet {
-  background: radial-gradient(circle, rgba(168, 85, 247, 0.12) 0%, rgba(168, 85, 247, 0) 70%);
-}
-
-.ambient-glow-cyan {
-  background: radial-gradient(circle, rgba(0, 240, 255, 0.12) 0%, rgba(0, 240, 255, 0) 70%);
-}
-
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(148, 163, 184, 0.3);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(148, 163, 184, 0.5);
-}
-
-.dark ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.15);
-}
-
-.dark ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.28);
+  font-family: var(--font-sans);
+  letter-spacing: -0.02em;
 }

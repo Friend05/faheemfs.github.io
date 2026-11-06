@@ -1,92 +1,73 @@
-import { useState, useEffect } from 'react';
-import { Menu, X, ArrowUpRight } from 'lucide-react';
-import { navLinks, siteMeta } from '../data/portfolio';
+import { useState } from 'react';
+import { Menu, X } from 'lucide-react';
+import { siteMeta } from '../data/portfolio';
 import { withBase } from '../paths';
 
 export function SiteHeader() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 12);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const items = [
+    { label: 'Work', href: '#work', external: false },
+    { label: 'Roles', href: '#roles', external: false },
+    { label: 'About', href: '#about', external: false },
+    { label: 'Resume', href: withBase(siteMeta.resumePath), external: true },
+    { label: 'Contact', href: '#contact', external: false },
+  ];
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
-        isScrolled
-          ? 'bg-white/95 backdrop-blur-md border-b border-slate-200/80 py-3.5'
-          : 'bg-white/80 backdrop-blur-sm border-b border-transparent py-5'
-      }`}
-    >
-      <div className="max-w-5xl mx-auto px-6 flex items-center justify-between">
-        {/* Brand */}
-        <a href="#top" className="flex items-center gap-3 group">
-          <div className="w-8 h-8 rounded-lg bg-slate-900 text-white flex items-center justify-center font-mono text-xs font-bold tracking-tight">
-            MF
-          </div>
-          <div className="text-left">
-            <div className="text-sm font-semibold text-slate-900 tracking-tight">
-              Mohammed Faheem FS
-            </div>
-            <div className="text-[11px] text-slate-500 hidden sm:block">
-              Founder&apos;s Office · Chief of Staff · AI Evals · BA
-            </div>
-          </div>
+    <header className="sticky top-0 z-40 bg-[#faf9f6]/95 backdrop-blur-xs border-b border-zinc-200">
+      <div className="max-w-3xl mx-auto px-6 h-16 flex items-center justify-between">
+        <a
+          href="#top"
+          className="text-sm font-semibold text-zinc-900 tracking-tight hover:text-teal-700 transition-colors"
+        >
+          Mohammed Faheem FS
         </a>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-6">
-          {navLinks.map((link) => (
+        {/* Desktop Nav: Work · Roles · About · Resume · Contact */}
+        <nav aria-label="Primary navigation" className="hidden sm:flex items-center gap-6">
+          {items.map((item) => (
             <a
-              key={link.label}
-              href={link.href}
-              className="text-xs font-medium text-slate-600 hover:text-slate-900 transition-colors"
+              key={item.label}
+              href={item.href}
+              {...(item.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+              className="text-sm text-zinc-600 hover:text-zinc-900 transition-colors"
             >
-              {link.label}
+              {item.label}
             </a>
           ))}
         </nav>
 
-        {/* Right Actions */}
-        <div className="flex items-center gap-3">
-          <a
-            href={withBase(siteMeta.resumePath)}
-            download
-            className="inline-flex items-center gap-1.5 text-xs font-medium px-3.5 py-2 rounded-lg bg-slate-900 text-white hover:bg-slate-800 transition-colors"
-          >
-            <span>Resume</span>
-            <ArrowUpRight size={13} />
-          </a>
-
-          <button
-            className="md:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle navigation menu"
-          >
-            {isMobileMenuOpen ? <X size={18} /> : <Menu size={18} />}
-          </button>
-        </div>
+        {/* Mobile Menu Toggle */}
+        <button
+          type="button"
+          className="sm:hidden p-2 -mr-2 text-zinc-600 hover:text-zinc-900"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-expanded={menuOpen}
+          aria-label="Toggle navigation menu"
+        >
+          {menuOpen ? <X size={20} /> : <Menu size={20} />}
+        </button>
       </div>
 
-      {/* Mobile Dropdown */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden bg-white border-b border-slate-200 px-6 py-4 space-y-2 text-left">
-          {navLinks.map((link) => (
+      {/* Mobile Nav */}
+      {menuOpen && (
+        <nav
+          aria-label="Mobile navigation"
+          className="sm:hidden bg-[#faf9f6] border-b border-zinc-200 px-6 py-4 flex flex-col gap-3 text-left"
+        >
+          {items.map((item) => (
             <a
-              key={link.label}
-              href={link.href}
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="block py-2 text-sm font-medium text-slate-700 hover:text-slate-900 border-b border-slate-100 last:border-0"
+              key={item.label}
+              href={item.href}
+              {...(item.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+              onClick={() => setMenuOpen(false)}
+              className="text-sm font-medium text-zinc-700 hover:text-zinc-900 py-1"
             >
-              {link.label}
+              {item.label}
             </a>
           ))}
-        </div>
+        </nav>
       )}
     </header>
   );

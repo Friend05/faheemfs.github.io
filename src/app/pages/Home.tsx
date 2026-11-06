@@ -5,7 +5,6 @@ import { CaseStudies } from '../components/CaseStudies';
 import { Contact } from '../components/Contact';
 import { Experience } from '../components/Experience';
 import { Hero } from '../components/Hero';
-import { FAQ } from '../components/FAQ';
 import { SiteFooter } from '../components/SiteFooter';
 import { SiteHeader } from '../components/SiteHeader';
 import { Skills } from '../components/Skills';
@@ -32,16 +31,21 @@ export function Home() {
   return (
     <div
       id="top"
-      className="min-h-screen overflow-x-hidden bg-white text-slate-900 selection:bg-slate-900 selection:text-white relative font-sans"
+      className="min-h-screen bg-[#faf9f6] text-zinc-900 selection:bg-zinc-900 selection:text-white font-sans"
     >
       <SiteHeader />
       <main>
+        {/* 1. Hero */}
         <Hero />
-        <Experience />
+        {/* 2. Selected Work */}
         <CaseStudies />
+        {/* 3. Target Roles */}
         <Skills />
+        {/* 4. Experience */}
+        <Experience />
+        {/* 5. About */}
         <About />
-        <FAQ />
+        {/* 6. Contact */}
         <Contact />
       </main>
       <SiteFooter />
