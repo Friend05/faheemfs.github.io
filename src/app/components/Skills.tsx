@@ -1,87 +1,64 @@
-import { motion } from 'motion/react';
-import { Target, BarChart, Settings, LineChart, Users, FileText, Sparkles, CheckCircle2 } from 'lucide-react';
-import { capabilityGroups } from '../data/portfolio';
-
-const getSkillStyle = (index: number) => {
-  switch (index) {
-    case 0: return { icon: <Target size={18} className="text-indigo-600" />, badge: 'bg-indigo-50 border-indigo-100' };
-    case 1: return { icon: <Settings size={18} className="text-sky-600" />, badge: 'bg-sky-50 border-sky-100' };
-    case 2: return { icon: <BarChart size={18} className="text-emerald-600" />, badge: 'bg-emerald-50 border-emerald-100' };
-    case 3: return { icon: <LineChart size={18} className="text-violet-600" />, badge: 'bg-violet-50 border-violet-100' };
-    case 4: return { icon: <Users size={18} className="text-pink-600" />, badge: 'bg-pink-50 border-pink-100' };
-    case 5: return { icon: <FileText size={18} className="text-amber-600" />, badge: 'bg-amber-50 border-amber-100' };
-    default: return { icon: <Target size={18} className="text-indigo-600" />, badge: 'bg-indigo-50 border-indigo-100' };
-  }
-};
+import { capabilityGroups, tools } from '../data/portfolio';
 
 export function Skills() {
   return (
-    <section id="capabilities" className="py-24 relative bg-slate-50/60 border-t border-slate-200/80 overflow-hidden">
-      <div className="w-full max-w-[1240px] mx-auto px-6 relative z-10">
-        
-        {/* Section Header */}
-        <div className="mb-14 text-left">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-50 border border-indigo-100 text-xs font-bold font-mono text-indigo-700 uppercase tracking-wider mb-4 shadow-sm">
-            <Sparkles size={13} className="text-indigo-600" />
-            Competency Matrix
-          </div>
-          <h2 className="text-[clamp(2.2rem,3.5vw,3rem)] font-extrabold text-slate-900 leading-tight font-display">
-            Business Analysis, <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-violet-600 to-pink-500">Data &amp; Growth Systems</span>
-          </h2>
-          <p className="text-slate-600 max-w-2xl mt-3 text-base sm:text-lg">
-            Six operational competencies structured to turn raw stakeholder ambiguity into high-velocity product execution.
+    <section id="capabilities" className="py-16 bg-slate-50/60 border-t border-slate-200">
+      <div className="max-w-5xl mx-auto px-6 text-left">
+        <div className="mb-10">
+          <p className="text-xs font-mono uppercase tracking-wider text-slate-500 mb-2">
+            Capabilities &amp; Toolkit
           </p>
+          <h2 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">
+            Core Competencies
+          </h2>
         </div>
 
-        {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 text-left">
-          {capabilityGroups.map((group, index) => {
-            const { icon, badge } = getSkillStyle(index);
-            const items = group.items || (group as any).skills || [];
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
+          {capabilityGroups.map((group) => (
+            <div
+              key={group.title}
+              className="p-6 rounded-xl bg-white border border-slate-200 flex flex-col justify-between"
+            >
+              <div>
+                <span className="text-[11px] font-mono text-slate-400">
+                  {group.eyebrow}
+                </span>
+                <h3 className="text-base font-bold text-slate-900 mt-1 mb-2">
+                  {group.title}
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed mb-4">
+                  {group.summary}
+                </p>
+              </div>
 
-            return (
-              <motion.div
-                key={group.title}
-                initial={{ opacity: 0, y: 25 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-60px' }}
-                transition={{ duration: 0.5, delay: index * 0.08 }}
-                className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-md shadow-slate-200/50 hover:shadow-xl hover:border-indigo-300 flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1 relative"
+              <ul className="space-y-1.5 pt-3 border-t border-slate-100">
+                {group.items.map((skill) => (
+                  <li key={skill} className="text-xs text-slate-700 flex items-start gap-2">
+                    <span className="text-slate-400">•</span>
+                    <span>{skill}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        {/* Tools Strip */}
+        <div className="p-6 rounded-xl bg-white border border-slate-200">
+          <p className="text-xs font-mono uppercase tracking-wider text-slate-500 mb-3">
+            Tools &amp; Platforms
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {tools.map((tool) => (
+              <span
+                key={tool}
+                className="px-3 py-1.5 rounded-lg bg-slate-50 border border-slate-200 text-slate-800 text-xs font-medium"
               >
-                <div>
-                  {/* Top Module Number & Icon */}
-                  <div className="flex items-center justify-between mb-5">
-                    <span className={`p-3 rounded-2xl border ${badge}`}>
-                      {icon}
-                    </span>
-                    <span className="text-[11px] font-mono font-bold text-slate-400 uppercase tracking-wider">
-                      MODULE 0{index + 1}
-                    </span>
-                  </div>
-
-                  <h3 className="text-xl font-bold text-slate-900 mb-2 font-display">
-                    {group.title}
-                  </h3>
-
-                  <p className="text-xs sm:text-sm text-slate-600 mb-6 leading-relaxed">
-                    {group.summary || (group as any).description}
-                  </p>
-                </div>
-
-                {/* Skills Bullet List */}
-                <div className="space-y-2 pt-4 border-t border-slate-100">
-                  {items.map((skill: string) => (
-                    <div key={skill} className="flex items-center gap-2 text-xs font-medium text-slate-800">
-                      <CheckCircle2 size={14} className="text-indigo-600 shrink-0" />
-                      <span>{skill}</span>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            );
-          })}
+                {tool}
+              </span>
+            ))}
+          </div>
         </div>
-
       </div>
     </section>
   );
